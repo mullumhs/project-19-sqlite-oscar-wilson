@@ -10,14 +10,10 @@ CREATE TABLE IF NOT EXISTS movies (
     title TEXT NOT NULL,
     director TEXT,
     year INTEGER,
-    rating FLOAT
+    rating FLOAT,
+    genre TEXT
 )
 ''')
-
-cursor.execute("""
-ALTER TABLE movies ADD COLUMN genre TEXT               
-""")
-conn.commit()
 
 # -------------------------------------------------------- Inserting Stuff --------------------------------------------------------
 # Insert Mean Girls (2004)
