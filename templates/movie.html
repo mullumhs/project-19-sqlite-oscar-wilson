@@ -1,10 +1,10 @@
 {% extends 'movie_base.html' %}
 
 {% block content %}
-<h1>{{ selected_movie[1] }} ({{ selected_movie[3] }})</h1>
+<h1>{{ selected_movie['title'] }} ({{ selected_movie['year'] }})</h1>
 <p>
-    Director: {{selected_movie[2]}}<br>
-    Rating: {{selected_movie[4]}}<br>
-    Genre: {{selected_movie[5]}}
+    Director: {{selected_movie['director']}}<br>
+    Rating: {{selected_movie['rating']}}<br>
+    Genre: {{selected_movie['genre']}}
 </p>
 {% endblock %}
