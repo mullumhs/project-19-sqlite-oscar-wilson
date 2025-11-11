@@ -37,7 +37,7 @@
           </tr>
           {% for movie in movies %}
           <tr>
-            <td><a class="list-group-item"href="{{ url_for('index')}}">{{ movie.title }}</a> (<a href="{{ url_for('edit_movie', id=movie.id) }}">Edit</a>)</td>
+            <td><a class="link-primary link-underline-primary link-underline-opacity-25 link-underline-opacity-100-hover" href="{{ url_for('edit_movie', id=movie.id) }}">{{ movie.title }}</a></td>
             <td>{{ movie.director }}</td>
             <td>{{ movie.year }}</td>
             <td>{{ movie.rating }}</td>
