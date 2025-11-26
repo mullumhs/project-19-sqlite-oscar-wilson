@@ -38,7 +38,11 @@ def add_movie():
 
 @app.route('/edit/<int:id>')
 def edit_movie(id):
-    movie = Movie.query.get_or_404(id)
+    if id != 0:
+        movie = Movie.query.get_or_404(id)
+    else:
+        movie = None
+
     if request.method == 'POST':
         movie.title = request.form['title']
         movie.director = request.form['director']
